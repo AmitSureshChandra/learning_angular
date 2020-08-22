@@ -7,13 +7,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 })
 
-
 export class HomeComponent implements OnInit {
-
-
   @Input() data
   @Output() onYell = new EventEmitter()
-  
+
   constructor() { }
 
   clickMe(){
@@ -24,7 +21,7 @@ export class HomeComponent implements OnInit {
   }
 
   emitEvent(e){
+    console.log('on-child')
     this.onYell.emit(e)
   }
-
 }

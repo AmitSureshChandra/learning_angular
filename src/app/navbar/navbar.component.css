@@ -4,13 +4,28 @@
     font-size: 18px;
 }
 
-ul>li{
-    display: inline-block;
-    width: 32%;
-    text-align: center;
+body{
+
 }
 
-a{
-    list-style-type: none;
-    text-decoration: none;
+ul{
+  background-color: dodgerblue;
+  line-height: 45px;
+  padding: 0px;
+  margin: 0;
 }
+
+ul>li{
+    display: inline-block;
+    width: 49.5%;
+    text-align: center;
+    color: white;
+}
+
+ul>li:hover{
+  cursor: pointer;
+  font-size: 20px;
+  color: orange;
+}
+
+

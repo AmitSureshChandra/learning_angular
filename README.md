@@ -1,58 +1,62 @@
-# install angular using npm
-npm install -g angular-cli
+#### install angular using npm
+    npm install -g angular-cli
 
 
-# Create Angular Project
+#### Create Angular Project
 
-ng new Project_name
+    ng new Project_name
 
-# Boot server
+#### Boot server
 
-ng serve
+    ng serve
 
-# Creating Component
+#### Creating Component
 
-ng generate component name_component
+    ng generate component name_component
 
-## Data Flow
+#### Data Flow
 
-1. Into View    
-    - String Interpolation
-        ``` {{ title }} ```
-    - Property binding
-        ``` <input [required]='expression'> ```
+    1. Into View    
+        - String Interpolation
+             {{ title }}
+        - Property binding
+             <input [required]='expression'> 
+    
+    2. Out of View 
+        -Event Binding
+             <button (click)='expression/function' > 
+            Event Component class can handle event
+    
+    3. Two-way Data-Binding
+         <input [(ngModel)]='Model/Obj> 
 
-2. Out of View 
-    -Event Binding
-        ``` <button (click)='expression/function' > ```
-        Event Component class can handle event
 
-3. Two-way Data-Binding
-    ``` <input [(ngModel)]='Model/Obj> ```
-
-
-# Property Bindings 
+#### Property Bindings 
 
     - Native  HTML Property 
-        ``` [value] = 'exprn' ```
+         [value] = 'exprn' 
     
     - Built in angular directive 
-        ``` [ngClass] = 'exprn' ```
+         [ngClass] = 'exprn' 
     
     - Custom made Property
-        ``` [my_prop] = 'exprn' ```
+         [my_prop] = 'exprn' 
     
     
-# Event Binding 
+#### Event Binding 
     1. native Event Binding
         <button (click)='function'>
 
     2. custom event we made 
         <app-component2 (update)='function'>
 
-# Input Decorator
+#### Input Decorator
 
     @Input() data; // in .component.ts inside class while sending data to child component
+    
+#### Output Decorator
+
+    @Output() onListen = EventEmitter();
 
 # AngularProject
 
