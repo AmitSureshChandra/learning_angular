@@ -1,3 +1,59 @@
+# install angular using npm
+npm install -g angular-cli
+
+
+# Create Angular Project
+
+ng new Project_name
+
+# Boot server
+
+ng serve
+
+# Creating Component
+
+ng generate component name_component
+
+## Data Flow
+
+1. Into View    
+    - String Interpolation
+        ``` {{ title }} ```
+    - Property binding
+        ``` <input [required]='expression'> ```
+
+2. Out of View 
+    -Event Binding
+        ``` <button (click)='expression/function' > ```
+        Event Component class can handle event
+
+3. Two-way Data-Binding
+    ``` <input [(ngModel)]='Model/Obj> ```
+
+
+# Property Bindings 
+
+    - Native  HTML Property 
+        ``` [value] = 'exprn' ```
+    
+    - Built in angular directive 
+        ``` [ngClass] = 'exprn' ```
+    
+    - Custom made Property
+        ``` [my_prop] = 'exprn' ```
+    
+    
+# Event Binding 
+    1. native Event Binding
+        <button (click)='function'>
+
+    2. custom event we made 
+        <app-component2 (update)='function'>
+
+# Input Decorator
+
+    @Input() data; // in .component.ts inside class while sending data to child component
+
 # AngularProject
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.

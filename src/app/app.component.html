@@ -1,3 +1,11 @@
 <h1>
-  {{title}}
+
+  <app-navbar>
+    demo navbar seen here
+  </app-navbar>
+
 </h1>
+
+<div id="main">
+  <app-home [data]='data' (onYell)='catchEvent($event)'></app-home>
+</div>

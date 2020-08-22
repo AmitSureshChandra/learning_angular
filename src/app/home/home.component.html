@@ -1,0 +1,7 @@
+<div>
+    <p>{{data}}</p>
+    
+    <input type="text" [(ngModel)]="data" >
+    <input type="submit" (click)="clickMe()" value="Submit">
+    <input type="submit" (click)="emitEvent($event)" value="Emit">
+</div>
