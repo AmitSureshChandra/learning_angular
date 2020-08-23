@@ -17,7 +17,6 @@ import { FilterPipe } from './pipes/filter.pipe';
     HomeComponent,
     DirectoryComponent,
     FilterPipe,
-    
   ],
   imports: [
     BrowserModule,
@@ -30,6 +29,6 @@ import { FilterPipe } from './pipes/filter.pipe';
 })
 export class AppModule {
 
-  
+
 
  }

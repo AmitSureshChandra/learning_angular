@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggingService} from '../services/logging.service';
 
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
-  styleUrls: ['./directory.component.css']
+  styleUrls: ['./directory.component.css'],
+  providers: [LoggingService]
 })
 export class DirectoryComponent implements OnInit {
 
@@ -15,10 +17,16 @@ export class DirectoryComponent implements OnInit {
     { 'name' : 'Dheeraj', 'color' : 'yellow'},
   ]
 
-  constructor() {
+  constructor(private logger : LoggingService) {
+
+  }
+
+  callService(){
+    this.logger.log()
   }
 
   ngOnInit() {
+
   }
 
 }

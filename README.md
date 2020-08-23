@@ -84,7 +84,23 @@
         1. Attribute     - interact with element on value change...  eg. ngClass
         2. Structural    - changes structure of HTML Code ... eg. *ngIf
         
+#### Pipes
 
+    - To create custom pipe
+    
+        ng generate pipe pipe-name
+            or
+        ng g p pipe-name    
+    
+    eg.. {{ name | uppercase }}
+        
+#### Services
+
+        ng generate service service-name
+            or
+        ng g s service-name    
+        
+        
 # AngularProject
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
