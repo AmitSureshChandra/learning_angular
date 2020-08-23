@@ -6,12 +6,5 @@ import { NavbarComponent } from './navbar/navbar.component';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'app works!';
-  msg = 'First try to learn Angular'
-  data = "Some Data"
 
-  catchEvent(e){
-    alert('event catched')
-    console.log(e);
-  }
 }

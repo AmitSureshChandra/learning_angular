@@ -8,20 +8,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class HomeComponent implements OnInit {
-  @Input() data
-  @Output() onYell = new EventEmitter()
+  data = "Home Page"
 
-  constructor() { }
-
-  clickMe(){
-    alert('You Clicked Me')
+  constructor() {
   }
 
   ngOnInit() {
-  }
-
-  emitEvent(e){
-    console.log('on-child')
-    this.onYell.emit(e)
   }
 }
