@@ -1,6 +1,11 @@
 <div>
-  Directory Working
-  <p [ngClass]="classes">Some Text to study Directive </p>
-
-  <p *ngIf="test">*ngIf directory - show if true expression</p>
+  Users Listing
+  <ul id="users-list">
+    <li *ngFor="let user of users">
+      <span [ngStyle]="{background: user.color}">&nbsp; &nbsp; &nbsp; &nbsp; </span>
+      &nbsp;
+      &nbsp;
+      {{ user.name }}
+    </li>
+  </ul>
 </div>

@@ -7,14 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectoryComponent implements OnInit {
 
-  test : boolean = false
-  classes : Object = {
-    red : true,
-    green : false,
-
-    blue : false,
-    underline : true,
-  }
+  users = [
+    { 'name' : 'Amit', 'color' : 'blue'},
+    { 'name' : 'Suraj', 'color' : 'red'},
+    { 'name' : 'Anurag', 'color' : 'green'},
+    { 'name' : 'Dheeraj', 'color' : 'yellow'},
+  ]
 
   constructor() {
   }
