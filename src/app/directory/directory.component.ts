@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectoryComponent implements OnInit {
 
+  term : string
   users = [
     { 'name' : 'Amit', 'color' : 'blue'},
     { 'name' : 'Suraj', 'color' : 'red'},

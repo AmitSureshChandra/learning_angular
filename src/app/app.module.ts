@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { DirectoryComponent } from './directory/directory.component';
 import { AppRoutingModule } from './app.routes';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AppRoutingModule } from './app.routes';
     NavbarComponent,
     HomeComponent,
     DirectoryComponent,
+    FilterPipe,
     
   ],
   imports: [
