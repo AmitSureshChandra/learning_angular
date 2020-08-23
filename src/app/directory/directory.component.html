@@ -5,7 +5,8 @@
       <span [ngStyle]="{background: user.color}">&nbsp; &nbsp; &nbsp; &nbsp; </span>
       &nbsp;
       &nbsp;
-      {{ user.name }}
+      {{ user.name | uppercase }}
+<!--    {{ user.name | uppercase | slice:1 }}  ie . Amit => MIT -->
     </li>
   </ul>
 </div>
