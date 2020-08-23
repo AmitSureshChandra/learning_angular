@@ -14,5 +14,15 @@
     </li>
   </ul>
 
-  <button (click)="callService()">Call Log Service</button>
+  <div>
+    <label>Name :
+      <input type="text"  [(ngModel)]="name">
+    </label><br>
+    <br>
+    <label>Color :
+      <input type="text"  [(ngModel)]="color">
+    </label><br>
+    <br>
+    <button (click)="addDataToFirebase()">Add</button>
+  </div>
 </div>

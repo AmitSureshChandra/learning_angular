@@ -14,6 +14,8 @@ export class DirectoryComponent implements OnInit {
 
   term : string
   users = []
+  name : string
+  color : string
 
   constructor(private logger : LoggingService, private data : DataService) {
     this.data.getData().subscribe(
@@ -31,9 +33,28 @@ export class DirectoryComponent implements OnInit {
 
   loadDataFromFireabase(){
     firebase.database().ref('/').on('child_added',(snapshot)=>{
-      if (!this.users.filter(v => v.name === snapshot.val().name && v.color === snapshot.val().color)){
+      if ( this.users && snapshot && !this.users.filter(v =>  v.name === snapshot.val().name && v.color === snapshot.val().color)){
         this.users.push(snapshot.val())
       }
+    })
+  }
+
+  addDataToFirebase(){
+
+    if (!(this.name && this.color)){
+      alert('provide Name & Tag Color')
+      return
+    }
+
+    // let length = this.users.length+1
+    // firebase.database().ref('').push({
+    //   name : this.name,
+    //   color : this.color
+    // })
+
+    this.users.push({
+      name : this.name,
+      color : this.color
     })
   }
 }
