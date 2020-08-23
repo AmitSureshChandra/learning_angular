@@ -5,7 +5,7 @@ import { LoggingService} from '../services/logging.service';
   selector: 'app-directory',
   templateUrl: './directory.component.html',
   styleUrls: ['./directory.component.css'],
-  providers: [LoggingService]
+
 })
 export class DirectoryComponent implements OnInit {
 
