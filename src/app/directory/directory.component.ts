@@ -1,24 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { LoggingService} from '../services/logging.service';
+import {DataService} from '../services/data.service';
 
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
   styleUrls: ['./directory.component.css'],
-
+  providers : [DataService]
 })
 export class DirectoryComponent implements OnInit {
 
   term : string
-  users = [
-    { 'name' : 'Amit', 'color' : 'blue'},
-    { 'name' : 'Suraj', 'color' : 'red'},
-    { 'name' : 'Anurag', 'color' : 'green'},
-    { 'name' : 'Dheeraj', 'color' : 'yellow'},
-  ]
+  users = []
 
-  constructor(private logger : LoggingService) {
-
+  constructor(private logger : LoggingService, private data : DataService) {
+    this.data.getData().subscribe(
+      v => this.users = v
+    )
   }
 
   callService(){
@@ -28,5 +26,7 @@ export class DirectoryComponent implements OnInit {
   ngOnInit() {
 
   }
+
+
 
 }
