@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 
 const routes: Routes = [
     {
-        path : 'directory/:id',
+        path : 'directory',
         component : DirectoryComponent
     },
     {

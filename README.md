@@ -57,6 +57,33 @@
 #### Output Decorator
 
     @Output() onListen = EventEmitter();
+    
+#### Passing Data using route
+
+
+    # in .component.ts
+    import { ActivatedRoute} from '@angular/router';
+       
+    export class DirectoryComponent implements OnInit {
+      name : string
+      constructor(private route : ActivatedRoute) {
+        this.name = route.snapshot.params['id']
+      }
+      ngOnInit() {
+      }
+    }
+    
+    #pass data as /directory/amit
+    
+    #in route '/directory/:id'
+    
+#### Directives
+    - are instructions that tell angular to do something
+    
+    Types Of Directive 
+        1. Attribute     - interact with element on value change...  eg. ngClass
+        2. Structural    - changes structure of HTML Code ... eg. *ngIf
+        
 
 # AngularProject
 
